@@ -253,7 +253,7 @@
         public function Delete_Mahasiswa($npm){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $this->sistemAkademik->DeleteMahasiswa($npm);
-                redirect('admin/Lihat_Mahasiswa');
+                redirect('admin/Lihat-Mahasiswa');
             }
             else{
                 redirect();
@@ -288,9 +288,6 @@
             }
         
         }
-
-       
-        
         public function KKS($npm){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $data['title'] = 'Kartu Kemajuan Studi - KRSAPP';

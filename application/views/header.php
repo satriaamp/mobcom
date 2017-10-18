@@ -35,16 +35,16 @@
         <div class="main-menu"> <!-- MAIN MENU -->
             <div class="main-menu-container">
               <li class="main-menu-list <?php if ($this->uri->segment(2) == '' ) echo "active" ?>">
-                  <a href="<?php echo base_url('admin');?>">Halaman Utama</a>
+                  <a href="<?php echo base_url('admin');?>">Verifikasi KRS</a>
               </li>
               <li class="main-menu-list <?php if ($this->uri->segment(2) == 'Lihat-Mahasiswa') echo "active" ?>">
-                <a href="<?php echo base_url('admin/Lihat-Mahasiswa'); ?>">Mahasiswa</a>
+                <a href="<?php echo base_url('admin/Lihat-Mahasiswa'); ?>">Daftar Mahasiswa</a>
               </li>
               <li class="main-menu-list <?php if ($this->uri->segment(2) == 'Lihat-Dosen') echo "active" ?>">
-                <a href="<?php echo base_url('admin/Lihat-Dosen'); ?>">Dosen</a>
+                <a href="<?php echo base_url('admin/Lihat-Dosen'); ?>">Daftar Dosen</a>
               </li>
               <li class="main-menu-list <?php if ($this->uri->segment(2) == 'Lihat-Matkul') echo "active" ?>">
-                <a href="<?php echo base_url('admin/Lihat-Matkul'); ?>">Mata Kuliah</a>
+                <a href="<?php echo base_url('admin/Lihat-Matkul'); ?>">Daftar Mata Kuliah</a>
               </li>
             </div>
             <div class="smoke"></div>
