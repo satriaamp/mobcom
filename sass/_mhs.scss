@@ -1,0 +1,206 @@
+<<<<<<< HEAD
+.page-title{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.primary-btn{
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	background-color: $blue;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	position: relative;
+	float: right;
+	margin: 2px;
+}
+
+.primary-btn[disabled]{
+	cursor: not-allowed;
+	opacity: .65;
+}
+
+.back-btn{
+	z-index: 3;
+	position: absolute;
+	left: 2%;
+	top: 35px;
+	width: 10%;
+	height: 30px;
+	line-height: 50px;
+	background-color: $red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-image: url('../images/icons/ic_arrow_back_white_24px.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.verify-btn{
+	width: 50%;
+	height: 30px;
+	background-color: $green;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	position: relative;
+	margin: 2px;
+	background-image: url('../images/icons/ic_check_white_24px.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.detail-btn{
+	z-index: 3;
+	position: absolute;
+	right: 2%;
+	top: 35px;
+	width: 10%;
+	height: 30px;
+	line-height: 50px;
+	background-color: $lightblue;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-image: url('../images/icons/ic_account_box_white_24px.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#gantipass{
+	width: 5%;
+	background-image: url('../images/icons/ic_vpn_key_white_24px.svg') !important; 
+}
+
+#lihatkrs{
+	float: right;
+}
+
+#ambil-matkul{
+	width: 100%;
+	height: auto;
+	padding: 6px 12px;
+	line-height: 20px;
+	font-weight: normal;
+=======
+.page-title{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.primary-btn{
+	width: 20%;
+	height: 50px;
+	line-height: 50px;
+	background-color: $blue;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	position: relative;
+	float: right;
+	margin: 2px;
+}
+
+.primary-btn[disabled]{
+	cursor: not-allowed;
+	opacity: .65;
+}
+
+.back-btn{
+	z-index: 3;
+	position: absolute;
+	left: 2%;
+	top: 35px;
+	width: 10%;
+	height: 30px;
+	line-height: 50px;
+	background-color: $red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-image: url('../images/icons/ic_arrow_back_white_24px.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.verify-btn{
+	width: 50%;
+	height: 30px;
+	background-color: $green;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	position: relative;
+	margin: 2px;
+	background-image: url('../images/icons/ic_check_white_24px.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.detail-btn{
+	z-index: 3;
+	position: absolute;
+	right: 2%;
+	top: 35px;
+	width: 10%;
+	height: 30px;
+	line-height: 50px;
+	background-color: $lightblue;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-image: url('../images/icons/ic_account_box_white_24px.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#gantipass{
+	width: 5%;
+	background-image: url('../images/icons/ic_vpn_key_white_24px.svg') !important; 
+}
+
+#lihatkrs{
+	float: right;
+}
+
+#ambil-matkul{
+	width: 100%;
+	height: auto;
+	padding: 6px 12px;
+	line-height: 20px;
+	font-weight: normal;
+>>>>>>> 63ddceff6ca33b55de2b9c39b3565fb3cca56dd4
+}
