@@ -36,9 +36,8 @@
                     </form>
                 </td>
             </tr>
-
             <?php
-                    $no++;
+                $no++;
                 }
             ?>
         </tbody>

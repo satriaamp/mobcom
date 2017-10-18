@@ -59,6 +59,15 @@
             // return $val3;
         }
 
+        public function InsertRequestKRS($data){
+            return $this->db->insert('t_request', $data);
+        }
+
+        public function UpdateRequestKRS($data){
+            $this->db->where('npm', $data['npm']);
+            return $this->db->update('t_request', $data);
+        }
+
         public function InsertMatkul($data){
             $val1 = $this->db->insert('t_kurikulum', $data);
             

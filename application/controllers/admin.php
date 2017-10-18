@@ -5,7 +5,7 @@
         public function index(){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $data['records'] = $this->sistemAkademik->GetAllData('t_request')->result();
-                $data['title'] = 'Admin KRSAPP - Data Mahasiswa';
+                $data['title'] = 'Admin KRSAPP - Verifikasi KRS';
                 
                 $this->load->view('header', $data);
                 $this->load->view('admin/homepage', $data);
@@ -146,24 +146,10 @@
             }
         }
 
-        public function Lihat_Dosen(){
-            if(!empty($this->session->userdata('logged_in'))){
-                $data['records'] = $this->sistemAkademik->GetAllData('t_dosen')->result();
-                $data['title'] = 'Admin KRSAPP - Dosen';
-                
-                $this->load->view('header', $data);
-                $this->load->view('admin/data-dosen', $data);
-                $this->load->view('footer');
-            }
-            else{
-                redirect();
-            }
-        }
-
         public function Lihat_Mahasiswa(){
             if(!empty($this->session->userdata('logged_in'))){
                 $data['records'] = $this->sistemAkademik->GetAllData('t_mahasiswa')->result();
-                $data['title'] = 'Admin KRSAPP - Mahasiswa';
+                $data['title'] = 'Daftar Mahasiswa - KRSAPP';
                 
                 $this->load->view('header', $data);
                 $this->load->view('admin/data-mahasiswa', $data);
@@ -174,10 +160,24 @@
             }
         }
 
+        public function Lihat_Dosen(){
+            if(!empty($this->session->userdata('logged_in'))){
+                $data['records'] = $this->sistemAkademik->GetAllData('t_dosen')->result();
+                $data['title'] = 'Daftar Dosen - KRSAPP';
+                
+                $this->load->view('header', $data);
+                $this->load->view('admin/data-dosen', $data);
+                $this->load->view('footer');
+            }
+            else{
+                redirect();
+            }
+        }
+
         public function Lihat_Matkul(){
             if(!empty($this->session->userdata('logged_in'))){
                 $data['records'] = $this->sistemAkademik->GetAllData('t_kurikulum')->result();
-                $data['title'] = 'Admin KRSAPP - Kurikulum';
+                $data['title'] = 'Kurikulum & Mata Kuliah - KRSAPP';
                 
                 $this->load->view('header', $data);
                 $this->load->view('admin/data-matkul', $data);

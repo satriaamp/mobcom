@@ -81,7 +81,7 @@
   opacity: 0;
   transition: opacity .3s;
   right: 40px;
-  bottom: 120px;
+  bottom: 80px;
   z-index: 2;
 }
 /* line 81, ../sass/_admin.scss */
@@ -94,18 +94,18 @@
 }
 /* line 99, ../sass/_admin.scss */
 .add-btn-popup-box .item {
-  width: 100%;
+  width: 70%;
   position: relative;
   float: right;
-  height: 50px;
+  height: 40px;
   margin-bottom: 3px;
   border: solid 1px white;
   border-radius: 4px;
-  font-weight: bold;
+  color: white;
   background-color: #9d9d9d;
 }
 
-/* line 113, ../sass/_admin.scss */
+/* line 114, ../sass/_admin.scss */
 .white-smoke {
   display: none;
   z-index: 1;
@@ -116,16 +116,16 @@
   opacity: 0;
   transition: opacity .3s;
 }
-/* line 116, ../sass/_admin.scss */
+/* line 117, ../sass/_admin.scss */
 .white-smoke.show {
   display: block;
 }
-/* line 128, ../sass/_admin.scss */
+/* line 129, ../sass/_admin.scss */
 .white-smoke.visible {
   opacity: 1;
 }
 
-/* line 133, ../sass/_admin.scss */
+/* line 134, ../sass/_admin.scss */
 .box-action-area {
   position: relative;
   width: 100%;
@@ -133,7 +133,7 @@
   margin-bottom: 20px;
 }
 
-/* line 142, ../sass/_admin.scss */
+/* line 143, ../sass/_admin.scss */
 .add-btn, .edit-btn {
   z-index: 2;
   border: none;
@@ -150,12 +150,12 @@
   box-shadow: 1px 1px 5px black;
 }
 
-/* line 158, ../sass/_admin.scss */
+/* line 159, ../sass/_admin.scss */
 .edit-btn {
   background-image: url("../images/icons/ic_edit_white_24px.svg");
 }
 
-/* line 163, ../sass/_admin.scss */
+/* line 164, ../sass/_admin.scss */
 .submit-btn, .finish-btn {
   width: 65%;
   height: 50px;
@@ -168,13 +168,13 @@
   border-radius: 5px;
 }
 
-/* line 175, ../sass/_admin.scss */
+/* line 176, ../sass/_admin.scss */
 .finish-btn {
   width: 100%;
   background-color: #5cb85c;
 }
 
-/* line 183, ../sass/_admin.scss */
+/* line 184, ../sass/_admin.scss */
 .back-to-home-btn {
   width: 20%;
   height: 50px;
@@ -188,7 +188,7 @@
   border-radius: 5px;
 }
 
-/* line 197, ../sass/_admin.scss */
+/* line 198, ../sass/_admin.scss */
 .info-btn {
   width: 20%;
   height: 50px;
@@ -203,11 +203,11 @@
   margin: 2px;
 }
 
-/* line 211, ../sass/_admin.scss */
+/* line 212, ../sass/_admin.scss */
 .proceed-btn {
-  width: 20%;
-  height: 50px;
-  line-height: 50px;
+  width: 15%;
+  height: 40px;
+  line-height: 40px;
   background-color: #5cb85c;
   color: white;
   font-weight: bold;
@@ -218,12 +218,12 @@
   margin: 2px;
 }
 
-/* line 225, ../sass/_admin.scss */
+/* line 226, ../sass/_admin.scss */
 #lihatkks {
   background-color: #174181;
 }
 
-/* line 229, ../sass/_admin.scss */
+/* line 230, ../sass/_admin.scss */
 .proceed-btn[disabled] {
   cursor: not-allowed;
   opacity: .65;
@@ -245,8 +245,8 @@
 /* line 13, ../sass/_mhs.scss */
 .primary-btn {
   width: 20%;
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   background-color: #174181;
   color: white;
   font-weight: bold;

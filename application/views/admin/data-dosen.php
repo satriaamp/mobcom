@@ -2,7 +2,7 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
     <div class="mhs-container">
-        <div class="container-title">DATA DOSEN</div>
+        <div class="container-title">DAFTAR DOSEN</div>
         <div class="table-container">
             <table class="table table-striped table-hover">
                 <thead>                                                                                                        

@@ -89,7 +89,7 @@
 	opacity: 0;
 	transition: opacity .3s;
 	right: 40px;
-	bottom: 120px;
+	bottom: 80px;
 	z-index: 2;
 
 	&.visible{
@@ -97,14 +97,15 @@
 	}
 
 	.item{
-		width: 100%;
+		width: 70%;
 		position: relative;
 		float: right;
-		height: 50px;
+		height: 40px;
 		margin-bottom: 3px;
 		border: solid 1px white;
 		border-radius: 4px;
-		font-weight: bold;
+		color: white;
+		// font-weight: bold;
 		background-color: $material;
 
 	}
@@ -209,9 +210,9 @@
 }
 
 .proceed-btn{
-	width: 20%;
-	height: 50px;
-	line-height: 50px;
+	width: 15%;
+	height: 40px;
+	line-height: 40px;
 	background-color: $green;
 	color: white;
 	font-weight: bold;
