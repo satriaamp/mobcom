@@ -1,44 +1,701 @@
-/*
-Error: Invalid CSS after "...-theme: #f5f5f5": expected "{", was ";"
-        on line 3 of C:/xampp/htdocs/KRS/sass/main.scss
+/* line 1, ../sass/_admin.scss */
+.mhs-container {
+  width: 100%;
+  position: relative;
+}
+/* line 5, ../sass/_admin.scss */
+.mhs-container .table-container {
+  padding: 20px;
+  border-radius: 4px;
+}
+/* line 11, ../sass/_admin.scss */
+.mhs-container.single-mid {
+  border: solid 2px lightgrey;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+  top: 5%;
+  left: 25%;
+}
+/* line 21, ../sass/_admin.scss */
+.mhs-container.medium-mid {
+  border: solid 2px lightgrey;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  width: 75%;
+  top: 5%;
+  left: 12.5%;
+}
+/* line 32, ../sass/_admin.scss */
+.mhs-container.krs {
+  border: solid 2px lightgrey;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  float: left;
+  width: 50%;
+  top: 0%;
+  left: 2%;
+  margin-right: 20px;
+}
+/* line 44, ../sass/_admin.scss */
+.mhs-container.matkul {
+  border: solid 2px lightgrey;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  float: left;
+  width: 45%;
+  top: 0%;
+  left: 2%;
+  margin-bottom: 20px;
+}
+/* line 57, ../sass/_admin.scss */
+.mhs-container .container-title {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+}
+/* line 69, ../sass/_admin.scss */
+.mhs-container .container-title#single-mid {
+  padding: 0;
+  height: 60px;
+  margin-bottom: 15px;
+}
 
-1: <<<<<<< HEAD
-2: // Color Palletes
-3: $main-theme: #f5f5f5;
-4: $red: #d9534f;
-5: $lightblue: #5bc0de;
-6: $blue: #174181;
-7: $green: #5cb85c;
-8: $material: #9d9d9d;
+/* line 78, ../sass/_admin.scss */
+.add-btn-popup-box {
+  display: none;
+  position: fixed;
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity .3s;
+  right: 40px;
+  bottom: 120px;
+  z-index: 2;
+}
+/* line 81, ../sass/_admin.scss */
+.add-btn-popup-box.show {
+  display: block;
+}
+/* line 95, ../sass/_admin.scss */
+.add-btn-popup-box.visible {
+  opacity: 1;
+}
+/* line 99, ../sass/_admin.scss */
+.add-btn-popup-box .item {
+  width: 100%;
+  position: relative;
+  float: right;
+  height: 50px;
+  margin-bottom: 3px;
+  border: solid 1px white;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: #9d9d9d;
+}
 
-Backtrace:
-C:/xampp/htdocs/KRS/sass/main.scss:3
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:665:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:658:in `ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:674:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:281:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...-theme: #f5f5f5\": expected \"{\", was \";\"\A         on line 3 of C:/xampp/htdocs/KRS/sass/main.scss\A \A 1: <<<<<<< HEAD\A 2: // Color Palletes\A 3: $main-theme: #f5f5f5;\A 4: $red: #d9534f;\A 5: $lightblue: #5bc0de;\A 6: $blue: #174181;\A 7: $green: #5cb85c;\A 8: $material: #9d9d9d;"; }
+/* line 113, ../sass/_admin.scss */
+.white-smoke {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 75px);
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity .3s;
+}
+/* line 116, ../sass/_admin.scss */
+.white-smoke.show {
+  display: block;
+}
+/* line 128, ../sass/_admin.scss */
+.white-smoke.visible {
+  opacity: 1;
+}
+
+/* line 133, ../sass/_admin.scss */
+.box-action-area {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* line 142, ../sass/_admin.scss */
+.add-btn, .edit-btn {
+  z-index: 2;
+  border: none;
+  background-color: #9d9d9d;
+  position: fixed;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  right: 40px;
+  bottom: 40px;
+  background-image: url("../images/icons/ic_add_white_24px.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 1px 1px 5px black;
+}
+
+/* line 158, ../sass/_admin.scss */
+.edit-btn {
+  background-image: url("../images/icons/ic_edit_white_24px.svg");
+}
+
+/* line 163, ../sass/_admin.scss */
+.submit-btn, .finish-btn {
+  width: 65%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #174181;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+/* line 175, ../sass/_admin.scss */
+.finish-btn {
+  width: 100%;
+  background-color: #5cb85c;
+}
+
+/* line 183, ../sass/_admin.scss */
+.back-to-home-btn {
+  width: 20%;
+  height: 50px;
+  float: left;
+  line-height: 50px;
+  background-color: #9d9d9d;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+/* line 197, ../sass/_admin.scss */
+.info-btn {
+  width: 20%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #5bc0de;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  float: right;
+  margin: 2px;
+}
+
+/* line 211, ../sass/_admin.scss */
+.proceed-btn {
+  width: 20%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #5cb85c;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  float: left;
+  margin: 2px;
+}
+
+/* line 225, ../sass/_admin.scss */
+#lihatkks {
+  background-color: #174181;
+}
+
+/* line 229, ../sass/_admin.scss */
+.proceed-btn[disabled] {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+/* line 1, ../sass/_mhs.scss */
+.page-title {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* line 13, ../sass/_mhs.scss */
+.primary-btn {
+  width: 20%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #174181;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+  margin: 2px;
+}
+
+/* line 28, ../sass/_mhs.scss */
+.primary-btn[disabled] {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+/* line 33, ../sass/_mhs.scss */
+.back-btn {
+  z-index: 3;
+  position: absolute;
+  left: 2%;
+  top: 35px;
+  width: 10%;
+  height: 30px;
+  line-height: 50px;
+  background-color: #d9534f;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-image: url("../images/icons/ic_arrow_back_white_24px.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 52, ../sass/_mhs.scss */
+.verify-btn {
+  width: 50%;
+  height: 30px;
+  background-color: #5cb85c;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  margin: 2px;
+  background-image: url("../images/icons/ic_check_white_24px.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 68, ../sass/_mhs.scss */
+.detail-btn {
+  z-index: 3;
+  position: absolute;
+  right: 2%;
+  top: 35px;
+  width: 10%;
+  height: 30px;
+  line-height: 50px;
+  background-color: #5bc0de;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-image: url("../images/icons/ic_account_box_white_24px.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 87, ../sass/_mhs.scss */
+#gantipass {
+  width: 5%;
+  background-image: url("../images/icons/ic_vpn_key_white_24px.svg") !important;
+}
+
+/* line 92, ../sass/_mhs.scss */
+#lihatkrs {
+  float: right;
+}
+
+/* line 96, ../sass/_mhs.scss */
+#ambil-matkul {
+  width: 100%;
+  height: auto;
+  padding: 6px 12px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+/* line 1, ../sass/_main-menu.scss */
+.main-menu {
+  display: none;
+  width: 100%;
+  height: calc(100% - 75px);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+}
+/* line 10, ../sass/_main-menu.scss */
+.main-menu.show {
+  display: block;
+}
+/* line 14, ../sass/_main-menu.scss */
+.main-menu .main-menu-container {
+  position: absolute;
+  left: -100%;
+  min-width: 300px;
+  width: 25%;
+  height: 100%;
+  z-index: 12;
+  transition: left .25s;
+  background-color: lightgrey;
+}
+/* line 27, ../sass/_main-menu.scss */
+.main-menu.slide .main-menu-container {
+  left: 0;
+}
+/* line 30, ../sass/_main-menu.scss */
+.main-menu.slide .smoke {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* line 35, ../sass/_main-menu.scss */
+.main-menu .smoke {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color .25s;
+}
+
+/* line 44, ../sass/_main-menu.scss */
+.main-menu-body {
+  display: block;
+  height: calc(100% - 220px);
+  max-height: auto;
+  background-color: lightgrey;
+  overflow-y: scroll;
+}
+/* line 51, ../sass/_main-menu.scss */
+.main-menu-body :hover {
+  transition: .2s;
+  background-color: #393639;
+  text-decoration: none;
+}
+
+/* line 58, ../sass/_main-menu.scss */
+.active {
+  font-weight: bold;
+  border-left: solid 5px black;
+}
+
+/* line 68, ../sass/_main-menu.scss */
+.main-menu-list {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+/* line 75, ../sass/_main-menu.scss */
+.main-menu-list a {
+  display: block;
+  color: black;
+  font-size: 16px;
+  line-height: 60px;
+  padding: 0 30px;
+  text-decoration: none;
+}
+/* line 84, ../sass/_main-menu.scss */
+.main-menu-list :hover {
+  transition: .3s;
+  background-color: #CCCCCC;
+}
+/* line 90, ../sass/_main-menu.scss */
+.main-menu-list.secondary {
+  height: 50px;
+}
+/* line 92, ../sass/_main-menu.scss */
+.main-menu-list.secondary a {
+  display: block;
+  color: black;
+  font-size: 15px;
+  line-height: 50px;
+  padding: 0 50px;
+  text-decoration: none;
+}
+
+/* line 20, ../sass/main.scss */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 25, ../sass/main.scss */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+/* line 33, ../sass/main.scss */
+a {
+  text-decoration: none;
+}
+/* line 36, ../sass/main.scss */
+a :hover {
+  text-decoration: none;
+}
+
+/* line 41, ../sass/main.scss */
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: block;
+  clear: both;
+}
+
+/* line 47, ../sass/main.scss */
+.cf {
+  zoom: 1;
+}
+
+/* line 51, ../sass/main.scss */
+.splash-screen {
+  width: 100%;
+  height: 100%;
+  background-color: #9d9d9d;
+}
+/* line 56, ../sass/main.scss */
+.splash-screen .logo-unpad-ss {
+  position: absolute;
+  left: 47%;
+  top: 43%;
+  width: 100px;
+  height: 100px;
+  transition: left 1s;
+  background-image: url("../images/logo unpad.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+/* line 68, ../sass/main.scss */
+.splash-screen .logo-unpad-ss.slide-right {
+  left: 30%;
+}
+/* line 74, ../sass/main.scss */
+.splash-screen .title-ss {
+  display: none;
+  position: absolute;
+  left: 40%;
+  top: 43%;
+  width: 450px;
+  height: 100px;
+  transition: opacity 1s;
+  color: black;
+  padding: 10px 0;
+  font-size: 31px;
+}
+/* line 76, ../sass/main.scss */
+.splash-screen .title-ss.show {
+  display: block;
+  opacity: 0;
+}
+/* line 90, ../sass/main.scss */
+.splash-screen .title-ss.visible {
+  opacity: 1;
+}
+
+/* line 101, ../sass/main.scss */
+.app-header {
+  width: 100%;
+  height: 75px;
+  background-color: #9d9d9d;
+  box-shadow: 1px 1px 5px;
+}
+/* line 107, ../sass/main.scss */
+.app-header .logo-unpad {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 75px;
+  background-image: url("../images/logo unpad.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+/* line 118, ../sass/main.scss */
+.app-header .app-title {
+  position: relative;
+  float: left;
+  font-size: 20px;
+  padding: 23px 0;
+  color: black;
+}
+/* line 124, ../sass/main.scss */
+.app-header .app-title :hover {
+  text-decoration: none;
+}
+/* line 129, ../sass/main.scss */
+.app-header .logout-btn {
+  color: white;
+  position: relative;
+  float: right;
+  height: 35px;
+  margin: 17.5px 20px;
+  background-color: #d9534f;
+  border: none;
+  border-radius: 4px;
+}
+
+/* line 141, ../sass/main.scss */
+.main-menu-btn {
+  cursor: pointer;
+  display: block;
+  float: left;
+  background-image: url("../images/icons/ic_menu_black_24px.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 75px;
+  z-index: 2;
+}
+/* line 152, ../sass/main.scss */
+.main-menu-btn.click {
+  background-image: url("../../img/icons/close-black-24.svg");
+}
+
+/* line 157, ../sass/main.scss */
+.app-body {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 76px);
+  overflow-x: hidden;
+}
+/* line 163, ../sass/main.scss */
+.app-body .login-container {
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 100%;
+  background-color: #C9C9C9;
+}
+/* line 170, ../sass/main.scss */
+.app-body .login-container .login-form {
+  width: 80%;
+  height: 80%;
+  margin: 10% 50px;
+  border: solid 3px lightgrey;
+  border-radius: 25px;
+}
+/* line 177, ../sass/main.scss */
+.app-body .login-container .login-form .title {
+  height: 30px;
+  padding: 30px 50px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+/* line 187, ../sass/main.scss */
+.app-body .login-container .login-form .form-login {
+  position: relative;
+  margin: 0 40px;
+  width: 80%;
+  height: 50%;
+}
+/* line 194, ../sass/main.scss */
+.app-body .login-container .login-form .form-login .username-field, .app-body .login-container .login-form .form-login .pass-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 200, ../sass/main.scss */
+.app-body .login-container .login-form .form-login .pass-field {
+  margin-bottom: 20px;
+}
+/* line 205, ../sass/main.scss */
+.app-body .login-container .login-form .form-login .label {
+  width: auto;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 212, ../sass/main.scss */
+.app-body .login-container .login-form .form-login input {
+  position: relative;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  border: none;
+  border-radius: 3px;
+}
+/* line 223, ../sass/main.scss */
+.app-body .login-container .login-form .form-login .btn-login {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #174181;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+/* line 236, ../sass/main.scss */
+.app-body .login-container a {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+}
+/* line 244, ../sass/main.scss */
+.app-body .login-container .forgot {
+  color: black;
+  font-weight: bold;
+}
+/* line 250, ../sass/main.scss */
+.app-body .faculty-image {
+  position: relative;
+  float: left;
+  width: 60%;
+  height: 100%;
+  background-image: url("../images/TI-Unpad.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: .5;
+}
+/* line 261, ../sass/main.scss */
+.app-body .faculty-image span {
+  display: block;
+  width: 100%;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: white;
+  text-align: right;
+  font-weight: bold;
+}
+/* line 273, ../sass/main.scss */
+.app-body .copyright {
+  text-align: center;
+  width: 100%;
+  color: black;
+  position: absolute;
+  bottom: 5px;
+  font-size: 16px;
+}
