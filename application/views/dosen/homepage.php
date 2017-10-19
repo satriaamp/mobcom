@@ -25,7 +25,7 @@
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->sks;?></td>
                         
                         <td class="text-center" style="vertical-align:middle;">
-                            <form role="form" action="admin/Verifikasi-Mahasiswa/<?php echo $rec->npm;?>" method="post">
+                            <form role="form" action="dosen/Verifikasi-Mahasiswa/<?php echo $rec->npm;?>" method="post">
                                 <button type="submit" class="verify-btn" name="verify" onclick="return confirm('Are you sure you want to verify this entry ?')"></button>
                             </form>
                         </td>

@@ -20,17 +20,17 @@
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->nidn;?></td>
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->nama_dosen;?></td>
                         <td class="text-center" style="vertical-align:middle;">
-                            <form role="form" action="#" method="post">
+                            <form role="form" action="<?php echo base_url('admin/dosen/'.$rec->nidn);?>"  method="post">
                                 <button type="submit" class="btn btn-success" name="read">Detail Dosen</button>
                             </form>
                         </td>
                         <td class="text-center" style="vertical-align:middle;">
-                            <form role="form" action="#" method="post">
+                            <form role="form" action="<?php echo base_url('admin/dosen/'.$rec->nidn).'/Edit';?>" method="post">
                                 <button type="submit" class="btn btn-info" name="edit">Edit Detail</button>
                             </form>
                         </td>
                         <td class="text-center" style="vertical-align:middle;">
-                            <form role="form" action="#" method="post">
+                            <form role="form" action="<?php echo base_url('admin/Delete-Dosen/'.$rec->nidn);?>"  method="post">
                                 <button type="submit" class="btn btn-danger" name="delete" onclick="return confirm('Are you sure you want to delete this entry ?')">Hapus Data</button>
                             </form>
                         </td>

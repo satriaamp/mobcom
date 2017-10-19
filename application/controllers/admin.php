@@ -3,7 +3,7 @@
 
     class Admin extends CI_Controller {
         public function index(){
-            if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
+            if(!empty($this->session->userdata('logged_in')) && ($this->session->userdata('status') == 'admin') || ($this->session->userdata('status') == 'dosen')){
                 $data['records'] = $this->sistemAkademik->GetRequest();
                 $data['title'] = 'Admin KRSAPP - Verifikasi KRS';
                 
@@ -90,7 +90,7 @@
                     );
 
                     $insert = $this->sistemAkademik->InsertMatkul($data);
-                    var_dump($data);
+                    //var_dump($data);
 
                     if($insert){
                         redirect('admin');
@@ -130,7 +130,7 @@
                     );
 
                     $insert = $this->sistemAkademik->InsertDosen($data);
-                    var_dump($data);
+                    //var_dump($data);
 
                     if($insert){
                         redirect('admin/Lihat-Dosen');
@@ -207,6 +207,22 @@
                 redirect();
             }
         }
+
+        public function Detail_Dosen($nidn){
+            if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
+                $data['title'] = 'Detail Dosen - KRSAPP';
+                $data['record'] = $this->sistemAkademik->GetEntryDosen($nidn);
+
+                
+                
+                $this->load->view('header', $data);
+                $this->load->view('admin/detail-dosen', $data);
+                $this->load->view('footer');
+            }
+            else{
+                redirect();
+            }
+        }
         
         public function Edit_Mahasiswa($npm){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
@@ -248,11 +264,60 @@
                 redirect();
             }
         }
+
+         public function Edit_Dosen($nidn){
+            if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
+                $data['title'] = 'Ubah Data - KRSAPP';
+                $data['record'] = $this->sistemAkademik->GetEntryDosen($nidn);
+            
+                $val = $this->input->post('edit');
+
+                if($val == 'Update'){
+                    $this->form_validation->set_rules('nama_dosen', 'Nama', 'trim|required|max_length[25]');
+                    
+                }
+
+                if($this->form_validation->run() == FALSE){
+                    $this->load->view('header', $data);
+                    $this->load->view('admin/edit-detail-dosen', $data);
+                    $this->load->view('footer');
+                }
+                else{
+                    $data = array(
+                        'nidn' => $nidn,
+                        'nama_dosen' => $this->input->post('nama_dosen'),
+                       
+                    );
+
+                    $update = $this->sistemAkademik->UpdateEntryDosen($data);
+
+                    if($update){
+                        redirect('admin');
+                    }
+                    else{
+                        redirect('admin/dosen/'.$nidn);
+                    }
+                }
+            }
+            else{
+                redirect();
+            }
+        }
         
         public function Delete_Mahasiswa($npm){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $this->sistemAkademik->DeleteMahasiswa($npm);
                 redirect('admin/Lihat-Mahasiswa');
+            }
+            else{
+                redirect();
+            }
+        }
+
+        public function Delete_Dosen($nidn){
+            if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
+                $this->sistemAkademik->DeleteDosen($nidn);
+                redirect('admin/Lihat-Dosen');
             }
             else{
                 redirect();
@@ -281,6 +346,7 @@
             }
         
         }
+
         public function KKS($npm){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $data['title'] = 'Kartu Kemajuan Studi - KRSAPP';

@@ -13,8 +13,12 @@
                     if($login->status == 'admin'){
                         $sess_data['status'] = 'admin';
                     }
-                    else{
+                    else if($login->status == 'mahasiswa'){
                         $sess_data['status'] = 'mahasiswa';
+                    }
+                    else {
+                        $sess_data['status'] = 'dosen';
+
                     }
                     
                     $this->session->set_userdata($sess_data);
@@ -48,6 +52,11 @@
             $this->db->where('npm', $npm);
             return $this->db->get('t_mahasiswa')->result();
         }
+
+        public function GetEntryDosen($nidn){
+            $this->db->where('nidn', $nidn);
+            return $this->db->get('t_dosen')->result();
+        }
         
         public function InsertMahasiswa($data){
             $val1 = $this->db->insert('t_mahasiswa', $data);
@@ -71,13 +80,26 @@
 
         public function InsertDosen($data){
             $val1 = $this->db->insert('t_dosen', $data);
+
+            $login = array(
+                'username' => $data['nidn'],
+                'password' => $data['nidn'],
+                'status' => 'dosen'
+            );
             
-            return $val1;
+            $val2 = $this->db->insert('t_login', $login);
+            
+            return $val1 AND $val2;       
         }
         
         public function UpdateEntryMahasiswa($data){
             $this->db->where('npm', $data['npm']);
             return $this->db->update('t_mahasiswa', $data);
+        }
+
+         public function UpdateEntryDosen($data){
+            $this->db->where('nidn', $data['nidn']);
+            return $this->db->update('t_dosen', $data);
         }
 
       
@@ -102,6 +124,16 @@
             
             $this->db->where('npm', $npm);
             $this->db->delete('t_krs');
+
+        }
+
+         public function DeleteDosen($nidn){
+            $this->db->where('nidn', $nidn);
+            $this->db->delete('t_dosen');
+            
+            $this->db->where('username', $nidn);
+            $this->db->delete('t_login');
+           
 
         }
 

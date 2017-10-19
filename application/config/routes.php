@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['login'] = 'web/login';
 $route['logout'] = 'web/logout';
 $route['loginPage'] = 'web/loginPage';
+
 $route['admin/homepage'] = 'admin/homepage';
 $route['admin/Add-Mahasiswa'] = 'admin/Add_Mahasiswa';
 $route['admin/Add-Matkul'] = 'admin/Add_Matkul';
@@ -65,6 +66,16 @@ $route['admin/mahasiswa/(:any)/KKS'] = 'admin/KKS/$1';
 $route['admin/mahasiswa/(:any)/KRS/(:any)'] = 'admin/KRS/$1/$2';
 $route['admin/mahasiswa/(:any)/Edit'] = 'admin/Edit_Mahasiswa/$1';
 $route['admin/mahasiswa/(:any)'] = 'admin/Detail_Mahasiswa/$1';
+
+$route['admin/dosen/(:any)/Edit'] = 'admin/Edit_Dosen/$1';
+$route['admin/dosen/(:any)'] = 'admin/Detail_Dosen/$1';
+$route['admin/Delete-Dosen/(:any)'] = 'admin/Delete_Dosen/$1';
+
+$route['dosen/homepage'] = 'dosen/homepage';
+$route['dosen/Verifikasi-Mahasiswa/(:any)'] = 'dosen/Verifikasi_Mahasiswa/$1';
+
+
+
 $route['mahasiswa/(:any)/Change-Password'] = 'mahasiswa/Change_Password/$1';
 $route['mahasiswa/(:any)/KKS'] = 'mahasiswa/KKS/$1';
 $route['mahasiswa/(:any)/KRS/(:any)'] = 'mahasiswa/KRS/$1/$2';
