@@ -4,7 +4,7 @@
     class Admin extends CI_Controller {
         public function index(){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
-                $data['records'] = $this->sistemAkademik->GetAllData('t_request')->result();
+                $data['records'] = $this->sistemAkademik->GetRequest();
                 $data['title'] = 'Admin KRSAPP - Verifikasi KRS';
                 
                 $this->load->view('header', $data);
@@ -42,7 +42,6 @@
                         'nama' => $this->input->post('nama'),
                         'semester' => $this->input->post('semester'),
                         'sks' => $this->input->post('sks'),
-                        'verifikasi' => 'Pending'
                     );
 
                     $insert = $this->sistemAkademik->InsertMahasiswa($data);
@@ -265,14 +264,8 @@
                 $data['title'] = 'Ubah Data - KRSAPP';
                 $data['record'] = $this->sistemAkademik->GetEntryMahasiswa($npm);
             
-            
-                    $data = array(
-                        'npm' => $npm,
-                        'verifikasi' => 'Verified'
-                    );
-
-                    $update = $this->sistemAkademik->UpdateVerifikasiMahasiswa($data);
-                                    $this->sistemAkademik->DeleteRequest($npm);
+    
+                    $update = $this->sistemAkademik->UpdateVerifikasiMahasiswa($npm);
 
 
                     if($update){

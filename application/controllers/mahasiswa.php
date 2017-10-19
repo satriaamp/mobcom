@@ -137,6 +137,7 @@
                 if($val1 && $val2 && $val3){
                     $insert = $this->sistemAkademik->AddEntryKRS($npm, $kd_matkul, $semester);
                     if($insert){
+                        $this->sistemAkademik->UpdateStatusMahasiswa($npm);
                        redirect('mahasiswa/'.$npm.'/Isi-Dan-Edit-KRS/'.$semester);
                     }
                 }
@@ -174,6 +175,7 @@
                 $semester = $this->sistemAkademik->GetEntryMahasiswa($npm)[0]->semester;
             
                 $this->sistemAkademik->DeleteEntryKRS($npm, $kd_matkul, $semester);
+                $this->sistemAkademik->UpdateStatusMahasiswa($npm);
                 redirect('mahasiswa/'.$npm.'/Isi-Dan-Edit-KRS/'.$semester);
             }
             else{

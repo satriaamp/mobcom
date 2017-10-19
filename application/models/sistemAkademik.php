@@ -39,6 +39,11 @@
             return $this->db->get($table);
         }
         
+        public function GetRequest(){
+             $this->db->where('verifikasi', 'pending');
+             return $this->db->get('t_mahasiswa')->result();
+        }
+
         public function GetEntryMahasiswa($npm){
             $this->db->where('npm', $npm);
             return $this->db->get('t_mahasiswa')->result();
@@ -46,7 +51,6 @@
         
         public function InsertMahasiswa($data){
             $val1 = $this->db->insert('t_mahasiswa', $data);
-            // $val3 = $this->db->insert('t_request', $data);
             $login = array(
                 'username' => $data['npm'],
                 'password' => $data['npm'],
@@ -56,17 +60,8 @@
             $val2 = $this->db->insert('t_login', $login);
             
             return $val1 AND $val2;
-            // return $val3;
         }
 
-        public function InsertRequestKRS($data){
-            return $this->db->insert('t_request', $data);
-        }
-
-        public function UpdateRequestKRS($data){
-            $this->db->where('npm', $data['npm']);
-            return $this->db->update('t_request', $data);
-        }
 
         public function InsertMatkul($data){
             $val1 = $this->db->insert('t_kurikulum', $data);
@@ -85,16 +80,19 @@
             return $this->db->update('t_mahasiswa', $data);
         }
 
-        public function UpdateVerifikasiMahasiswa($data){
-            $this->db->where('npm', $data['npm']);
-            return $this->db->update('t_mahasiswa', $data);
+      
+        public function UpdateStatusMahasiswa($npm){
+            $this->db->set('verifikasi', 'Pending');
+            $this->db->where('npm', $npm);
+            return $this->db->update('t_mahasiswa');
         }
 
-        public function DeleteRequest($npm){
+        public function UpdateVerifikasiMahasiswa($npm){
+            $this->db->set('verifikasi', 'Terverifikasi');
             $this->db->where('npm', $npm);
-            $this->db->delete('t_request');
+            return $this->db->update('t_mahasiswa');
         }
-        
+
         public function DeleteMahasiswa($npm){
             $this->db->where('npm', $npm);
             $this->db->delete('t_mahasiswa');
@@ -105,8 +103,6 @@
             $this->db->where('npm', $npm);
             $this->db->delete('t_krs');
 
-            $this->db->where('npm', $npm);
-            $this->db->delete('t_request');
         }
 
         
