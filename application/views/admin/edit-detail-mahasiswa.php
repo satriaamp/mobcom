@@ -33,6 +33,8 @@
                 <span class="text-danger"><?php echo form_error('sks');?></span>
             </div>
         </div>
+        
+
         <div class="box-action-area cf">
             <button type="submit" class="submit-btn" name="edit" onclick="return confirm('Are you sure you want to edit this entry ?')" value="Update"><i class="fa fa-edit"></i> Edit</button>
         </div>

@@ -4,7 +4,7 @@
     <form role="form" action="/KRS/admin" method="post">
         <button type="submit"class="back-btn" name="back"></button>
     </form>
-    <div class="container-title" id="single-mid">Ubah Data Mahasiswa</div>
+    <div class="container-title" id="single-mid">Ubah Data Dosen</div>
     <?php echo form_open('admin/Edit_Dosen/'.$record[0]->nidn);?>
         <div class="form-group row">
             <label for="nidn" class="col-md-4 form-control-label">NIDN</label>
@@ -15,8 +15,15 @@
         <div class="form-group row">
             <label for="nama" class="col-md-4 form-control-label">Nama</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="<?php echo $record[0]->nama_dosen;?>" value="<?php echo set_value('nama_dosen');?>">
-                <span class="text-danger"><?php echo form_error('nama_dosen');?></span>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="<?php echo $record[0]->nama;?>" value="<?php echo set_value('nama');?>">
+                <span class="text-danger"><?php echo form_error('nama');?></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="npm" class="col-md-4 form-control-label">NPM</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="npm" name="npm" placeholder="<?php echo $record[0]->npm;?>" value="<?php echo set_value('npm');?>">
+                <span class="text-danger"><?php echo form_error('npm');?></span>
             </div>
         </div>
         

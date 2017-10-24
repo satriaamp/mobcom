@@ -71,6 +71,8 @@ $route['admin/dosen/(:any)/Edit'] = 'admin/Edit_Dosen/$1';
 $route['admin/dosen/(:any)'] = 'admin/Detail_Dosen/$1';
 $route['admin/Delete-Dosen/(:any)'] = 'admin/Delete_Dosen/$1';
 
+
+
 $route['dosen/homepage'] = 'dosen/homepage';
 $route['dosen/Verifikasi-Mahasiswa/(:any)'] = 'dosen/Verifikasi_Mahasiswa/$1';
 

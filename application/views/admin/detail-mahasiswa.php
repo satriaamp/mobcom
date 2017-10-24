@@ -27,6 +27,7 @@
             <td><?php echo $record[0]->verifikasi;?></td>
                 
         </tr>
+        
     </table>
     <div class="box-action-area cf">
         <form role="form" action="/KRS/admin/mahasiswa/<?php echo $record[0]->npm;?>/KKS" method="post">

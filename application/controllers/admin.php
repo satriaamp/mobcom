@@ -60,6 +60,9 @@
             }
         }
 
+
+         
+
         public function Add_Matkul(){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $data = array();
@@ -115,7 +118,7 @@
                 
                 if($val == 'Add'){
                     $this->form_validation->set_rules('nidn', 'NIDN', 'trim|required');
-                    $this->form_validation->set_rules('nama_dosen', 'Nama Dosen', 'trim|required|max_length[50]');
+                    $this->form_validation->set_rules('nama', 'Nama Dosen', 'trim|required|max_length[50]');
                 }
                     
                 if($this->form_validation->run() == FALSE){
@@ -126,7 +129,7 @@
                 else{
                     $data = array(
                         'nidn' => $this->input->post('nidn'),
-                        'nama_dosen' => $this->input->post('nama_dosen'),
+                        'nama' => $this->input->post('nama'),
                     );
 
                     $insert = $this->sistemAkademik->InsertDosen($data);
@@ -273,7 +276,7 @@
                 $val = $this->input->post('edit');
 
                 if($val == 'Update'){
-                    $this->form_validation->set_rules('nama_dosen', 'Nama', 'trim|required|max_length[25]');
+                    $this->form_validation->set_rules('nama', 'Nama', 'trim|required|max_length[25]');
                     
                 }
 
@@ -285,7 +288,8 @@
                 else{
                     $data = array(
                         'nidn' => $nidn,
-                        'nama_dosen' => $this->input->post('nama_dosen'),
+                        'nama' => $this->input->post('nama'),
+                        'npm'  => $this->input->post('npm'),
                        
                     );
 

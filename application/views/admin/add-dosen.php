@@ -14,10 +14,10 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="nama_dosen" class="col-md-4 form-control-label">Nama Dosen</label>
+        <label for="nama" class="col-md-4 form-control-label">Nama Dosen</label>
         <div class="col-md-8">
-            <input type="text" class="form-control" id="nama_dosen" name="nama_dosen" placeholder="Nama Dosen" value="<?php echo set_value('nama_dosen');?>">
-            <span class="text-danger"><?php echo form_error('nama_dosen');?></span>
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Dosen" value="<?php echo set_value('nama');?>">
+            <span class="text-danger"><?php echo form_error('nama');?></span>
         </div>
     </div>
     <div class="box-action-area">

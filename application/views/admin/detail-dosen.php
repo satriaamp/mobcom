@@ -7,16 +7,17 @@
     <div class="container-title" id="single-mid">Detail Dosen</div>
     <table class="table table-striped table-hover">
         <tr>
-            <th>NPM</th>
+            <th>NIDN</th>
             <td><?php echo $record[0]->nidn;?></td>
         </tr>
         <tr>
             <th>Nama Dosen</th>
-            <td><?php echo $record[0]->nama_dosen;?></td>
+            <td><?php echo $record[0]->nama;?></td>
         </tr>
         <tr>
             <th>Nama Mahasiswa Yang di Bimbing</th>
-            <td>NPM - Nama </td>
+            <td><?php echo $record[0]->npm; ?> </td>
         </tr>
     </table>
-</div>>
+     
+</div>
