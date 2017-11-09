@@ -12,12 +12,12 @@
         </tr>
         <tr>
             <th>Nama Dosen</th>
-            <td><?php echo $record[0]->nama;?></td>
+            <td><?php echo $record[0]->nama_dosen;?></td>
         </tr>
-        <tr>
+        <!-- <tr>
             <th>Nama Mahasiswa Yang di Bimbing</th>
             <td><?php echo $record[0]->npm; ?> </td>
-        </tr>
+        </tr> -->
     </table>
      
 </div>

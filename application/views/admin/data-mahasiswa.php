@@ -5,15 +5,15 @@
         <div class="container-title">DAFTAR MAHASISWA</div>
         <div class="table-container">
             <table class="table table-striped table-hover">
-                <thead>                                                                                                                                
-                    <tr>                                                                                                                                  
+                <thead>                                                                                                                
+                    <tr>
                         <th class="text-center" style="vertical-align:middle;">NPM</th>
                         <th class="text-center" style="vertical-align:middle;">NAMA MAHASISWA</th>
                         <th class="text-center" style="vertical-align:middle;">SEMESTER</th>
                         <th class="text-center" style="vertical-align:middle;">SISA SKS</th>
                         <th class="text-center" style="vertical-align:middle;" colspan="3">ACTION</th>
-                    </tr>                                                                                                                                 
-                </thead>                                                                                                                                
+                    </tr>                   
+                </thead>        
                 <tbody>
                     <?php
                         foreach($records as $rec){
@@ -24,7 +24,7 @@
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->semester;?></td>			
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->sks;?></td>
                         <td class="text-center" style="vertical-align:middle;">
-                            <form role="form" action="<?php echo base_url('admin/mahasiswa/'.$rec->npm);?>" method="post">
+                            <form role="form" action="<?php echo site_url('admin/mahasiswa/'.$rec->npm);?>" method="post">
                                 <button type="submit" class="btn btn-success" name="read">Detail Mahasiswa</button>
                             </form>
                         </td>
@@ -38,10 +38,7 @@
                                 <button type="submit" class="btn btn-danger" name="delete" onclick="return confirm('Are you sure you want to delete this entry ?')">Hapus Data</button>
                             </form>
                         </td>
-                            
-                        
                     </tr>
-
                     <?php
                         }
                     ?>

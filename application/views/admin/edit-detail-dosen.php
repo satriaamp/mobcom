@@ -15,17 +15,17 @@
         <div class="form-group row">
             <label for="nama" class="col-md-4 form-control-label">Nama</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="<?php echo $record[0]->nama;?>" value="<?php echo set_value('nama');?>">
-                <span class="text-danger"><?php echo form_error('nama');?></span>
+                <input type="text" class="form-control" id="nama" name="nama_dosen" placeholder="<?php echo $record[0]->nama_dosen;?>" value="<?php echo set_value('nama');?>">
+                <span class="text-danger"><?php echo form_error('nama_dosen');?></span>
             </div>
         </div>
-        <div class="form-group row">
+        <!-- <div class="form-group row">
             <label for="npm" class="col-md-4 form-control-label">NPM</label>
             <div class="col-md-8">
                 <input type="text" class="form-control" id="npm" name="npm" placeholder="<?php echo $record[0]->npm;?>" value="<?php echo set_value('npm');?>">
                 <span class="text-danger"><?php echo form_error('npm');?></span>
             </div>
-        </div>
+        </div> -->
         
         <div class="box-action-area cf">
             <button type="submit" class="submit-btn" name="edit" onclick="return confirm('Are you sure you want to edit this entry ?')" value="Update"><i class="fa fa-edit"></i> Edit</button>

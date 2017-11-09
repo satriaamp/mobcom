@@ -118,7 +118,7 @@
                 
                 if($val == 'Add'){
                     $this->form_validation->set_rules('nidn', 'NIDN', 'trim|required');
-                    $this->form_validation->set_rules('nama', 'Nama Dosen', 'trim|required|max_length[50]');
+                    $this->form_validation->set_rules('nama_dosen', 'Nama Dosen', 'trim|required|max_length[50]');
                 }
                     
                 if($this->form_validation->run() == FALSE){
@@ -129,7 +129,7 @@
                 else{
                     $data = array(
                         'nidn' => $this->input->post('nidn'),
-                        'nama' => $this->input->post('nama'),
+                        'nama_dosen' => $this->input->post('nama_dosen'),
                     );
 
                     $insert = $this->sistemAkademik->InsertDosen($data);
@@ -288,8 +288,8 @@
                 else{
                     $data = array(
                         'nidn' => $nidn,
-                        'nama' => $this->input->post('nama'),
-                        'npm'  => $this->input->post('npm'),
+                        'nama_dosen' => $this->input->post('nama_dosen'),
+                        'npm'  => $this->input->post('npm')
                        
                     );
 

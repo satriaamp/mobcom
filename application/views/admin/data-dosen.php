@@ -18,8 +18,8 @@
                     ?>
                     <tr>
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->nidn;?></td>
-                        <td class="text-center" style="vertical-align:middle;"><?php echo $rec->nama;?></td>
-                        <td class="text-center" style="vertical-align:middle;">
+                        <td style="vertical-align:middle;"><?php echo $rec->nama_dosen;?></td>
+                        <td style="vertical-align:middle;">
                             <form role="form" action="<?php echo base_url('admin/dosen/'.$rec->nidn);?>"  method="post">
                                 <button type="submit" class="btn btn-success" name="read">Detail Dosen</button>
                             </form>
