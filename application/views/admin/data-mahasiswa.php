@@ -11,7 +11,9 @@
                         <th class="text-center" style="vertical-align:middle;">NAMA MAHASISWA</th>
                         <th class="text-center" style="vertical-align:middle;">SEMESTER</th>
                         <th class="text-center" style="vertical-align:middle;">SISA SKS</th>
+                        <?php if(($this->session->userdata('status')) == 'admin'): ?>
                         <th class="text-center" style="vertical-align:middle;" colspan="3">ACTION</th>
+                        <?php endif ?>
                     </tr>                   
                 </thead>        
                 <tbody>
@@ -23,6 +25,7 @@
                         <td style="vertical-align:middle;"><?php echo $rec->nama;?></td>
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->semester;?></td>			
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->sks;?></td>
+                        <?php if(($this->session->userdata('status')) == 'admin'): ?>
                         <td class="text-center" style="vertical-align:middle;">
                             <form role="form" action="<?php echo site_url('admin/mahasiswa/'.$rec->npm);?>" method="post">
                                 <button type="submit" class="btn btn-success" name="read">Detail Mahasiswa</button>
@@ -38,6 +41,7 @@
                                 <button type="submit" class="btn btn-danger" name="delete" onclick="return confirm('Are you sure you want to delete this entry ?')">Hapus Data</button>
                             </form>
                         </td>
+                        <?php endif ?>
                     </tr>
                     <?php
                         }
@@ -46,7 +50,7 @@
             </table>
         </div>
     </div>
-    <?php if(isset($this->session->userdata['status']) == 'admin'): ?>
+    <?php if(($this->session->userdata('status')) == 'admin'): ?>
         <button type="submit" class="add-btn" name="add"></button>
         <div class="add-btn-popup-box">
             <form action="/KRS/admin/Add-Mahasiswa" method="post">

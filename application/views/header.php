@@ -10,9 +10,10 @@
         <link rel="icon" href="<?php echo base_url('/images/unpad.png'); ?>">
 
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-		<link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url('css/bootstrap.css');?>">
         <!-- <link rel="stylesheet" href="<?php echo base_url();?>css/font-awesome.css"> -->
         <link rel="stylesheet" href="<?php echo base_url();?>css/main.css">
+        <!-- <link rel="stylesheet" href="<?php echo base_url();?>assets/css/main.css"> -->
         <link rel="stylesheet" href="<?php echo base_url();?>css/animate.css">
 
         <script src="<?php echo base_url();?>js/jquery.min.js"></script>
@@ -22,13 +23,17 @@
         <div class="app-header cf">
             <?php if(isset($this->session->userdata['logged_in'])): ?>
                 <div class="main-menu-btn"></div>
+                <a href="<?php echo base_url('mahasiswa'); ?>" class="app-title">
+                    <b><?php echo $this->session->userdata['status']; ?> | </b>
             <?php else: ?>
                 <div class="logo-unpad"></div>
             <?php endif ?>
-            <a href="<?php echo base_url('mahasiswa'); ?>" class="app-title"><b>KRSAPP</b> UNIVERSITAS PADJADJARAN</a>
+            <a href="<?php echo base_url('mahasiswa'); ?>" class="app-title">
+                <b>| KRSAPP</b> Universitas Padjadjaran
+            </a>
             <?php if(isset($this->session->userdata['logged_in'])): ?>
             <form role="form" action="<?php echo base_url().'logout'; ?>" method="post">
-                <button type="submit" class="logout-btn" onclick="return confirm('Are you sure to sign out?')">Sign Out</button> 
+                <button type="submit" class="logout-btn" onclick="return confirm('Are you sure to sign out?')">Keluar dari KRS APP</button> 
             </form>
             <?php endif ?>
         </div>
@@ -45,6 +50,9 @@
               </li>
               <li class="main-menu-list <?php if ($this->uri->segment(2) == 'Lihat-Matkul') echo "active" ?>">
                 <a href="<?php echo base_url('admin/Lihat-Matkul'); ?>">Kurikulum & Mata Kuliah</a>
+              </li>
+              <li class="main-menu-list">
+                <a href="<?php echo base_url('logout'); ?>" onclick="return confirm('Are you sure to sign out?')">Keluar</a>
               </li>
             </div>
             <div class="smoke"></div>

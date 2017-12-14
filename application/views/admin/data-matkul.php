@@ -31,6 +31,7 @@
                                 <button type="submit" class="btn btn-success" name="read">Detail Mata Kuliah</button>
                             </form>
                         </td>
+                        <?php if(($this->session->userdata('status')) == 'admin'): ?>
                         <td class="text-center" style="vertical-align:middle;">
                             <form role="form" action="#" method="post">
                                 <button type="submit" class="btn btn-info" name="edit">Edit Detail</button>
@@ -41,6 +42,7 @@
                                 <button type="submit" class="btn btn-danger" name="delete" onclick="return confirm('Are you sure you want to delete this entry ?')">Hapus Data</button>
                             </form>
                         </td>
+                        <?php endif ?>
                     </tr>
                     <?php
                        $no++;

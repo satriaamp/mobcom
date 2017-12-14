@@ -3,7 +3,7 @@
 
     class SistemAkademik extends CI_Model{
         public function GetLoginData($username, $password){
-            $check = $this->db->get_where('t_login', array('username' => $username, 'password' => $password));
+            $check = $this->db->get_where('t_login', array('username' => $username, 'password' => md5($password)));
             
             if(count($check->result()) > 0){
                 foreach($check->result() as $login){

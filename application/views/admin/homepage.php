@@ -11,7 +11,8 @@
                         <th class="text-center" style="vertical-align:middle;">NAMA MAHASISWA</th>
                         <th class="text-center" style="vertical-align:middle;">SEMESTER</th>
                         <th class="text-center" style="vertical-align:middle;">SISA SKS</th>
-                        <th class="text-center" style="vertical-align:middle;" colspan="3">VERIFIKASI</th>
+                        <th class="text-center" style="vertical-align:middle;">DETAIL</th>
+                        <th class="text-center" style="vertical-align:middle;">VERIFIKASI KRS?</th>
                     </tr>                                                                                                                                 
                 </thead>                                                                                                                                
                 <tbody>
@@ -23,10 +24,14 @@
                         <td style="vertical-align:middle;"><?php echo $rec->nama;?></td>
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->semester;?></td>			
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->sks;?></td>
-                        
+                        <td class="text-center">
+                            <form role="form" action="<?php echo site_url('admin/mahasiswa/'.$rec->npm);?>" method="post">
+                                <button type="submit" class="btn btn-primary">Lihat Mahasiswa</button>
+                            </form>
+                        </td>
                         <td class="text-center" style="vertical-align:middle;">
                             <form role="form" action="admin/Verifikasi-Mahasiswa/<?php echo $rec->npm;?>" method="post">
-                                <button type="submit" class="verify-btn" name="verify" onclick="return confirm('Are you sure you want to verify this entry ?')"></button>
+                                <button type="submit" class="verify-btn" name="verify" onclick="return confirm('Are you sure you want to verify this entry?')"></button>
                             </form>
                         </td>
                     </tr>

@@ -40,5 +40,12 @@
         <div class="col-md-3">
             <h4>Sisa SKS : <?php echo $sisa_sks;?></h4>
         </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <form role="form" action="<?php echo base_url("admin/Verifikasi-Mahasiswa/<?php echo $record->npm;?>"); ?>" method="post">
+                <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="return confirm('Lanjutkan ke Verifikasi?')">Continue</button>
+            </form>
+        </div>
     </div>
 </div>

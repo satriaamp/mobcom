@@ -17,7 +17,7 @@
         </div>
         <a href="#" class="forgot">Forgot your password? Contact us!</a>
     <?php echo form_close();?>
-    <div class="copyright">&copy; Satria M. Purnama S1 Teknik Informatika UNPAD, 2017</div>
+    <div class="copyright">&copy; Satria, Ilyas, Raka, S1 Teknik Informatika UNPAD, MOBCOM 2017</div>
     </div>
     <div class="faculty-image">
         <span>This page was loaded in <strong>{elapsed_time}</strong> second(s)</span>

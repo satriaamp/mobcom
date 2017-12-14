@@ -2,11 +2,11 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-        <div class="container" style="margin-top:13%;">
+        <div class="container" style="margin-top:8%;">
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 well">
-                    <h3><i class="fa fa-gear"></i> Change Password</h3>
+                    <h3 class="text-center"><i class="fa fa-gear"></i> Change Password</h3>
                     <hr>
                     <?php echo form_open('mahasiswa/Change_Password/'.$npm);?>
                         <div class="form-group">
@@ -20,11 +20,11 @@
                             <span class="text-danger"><?php echo form_error('newpass');?></span>
                         </div>
                         <br>
-                    <button type="submit" class="col-md-6 btn btn-primary" name="submit" value="Change"><i class="fa fa-lock"></i> Change Password</button>
-                    <?php echo form_close();?>
                     <form role="form" action="/KRS/mahasiswa" method="post">
                         <button type="submit" class="col-md-6 btn btn-danger" name="cancel"><i class="fa fa-arrow-circle-left"></i> Cancel</button>
                     </form>
+                    <button type="submit" class="col-md-6 btn btn-primary" name="submit" value="Change"><i class="fa fa-lock"></i> Change Password</button>
+                    <?php echo form_close();?>
                 </div>
             </div>
         </div>

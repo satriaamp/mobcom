@@ -9,7 +9,9 @@
                     <tr>                                                                                                       
                         <th class="text-center" style="vertical-align:middle;">NIDN</th>
                         <th class="text-center" style="vertical-align:middle;">NAMA DOSEN</th>
+                        <?php if(($this->session->userdata('status')) == 'admin'): ?>
                         <th class="text-center" style="vertical-align:middle;" colspan="3">ACTION</th>
+                        <?php endif ?>
                     </tr>                                                                                                      
                 </thead>                                                                                                       
                 <tbody>
@@ -18,7 +20,8 @@
                     ?>
                     <tr>
                         <td class="text-center" style="vertical-align:middle;"><?php echo $rec->nidn;?></td>
-                        <td style="vertical-align:middle;"><?php echo $rec->nama_dosen;?></td>
+                        <td class="text-center" style="vertical-align:middle;"><?php echo $rec->nama_dosen;?></td>
+                        <?php if(($this->session->userdata('status')) == 'admin'): ?>
                         <td style="vertical-align:middle;">
                             <form role="form" action="<?php echo base_url('admin/dosen/'.$rec->nidn);?>"  method="post">
                                 <button type="submit" class="btn btn-success" name="read">Detail Dosen</button>
@@ -34,6 +37,7 @@
                                 <button type="submit" class="btn btn-danger" name="delete" onclick="return confirm('Are you sure you want to delete this entry ?')">Hapus Data</button>
                             </form>
                         </td>
+                        <?php endif ?>
                     </tr>
                     <?php
                         }

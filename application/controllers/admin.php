@@ -60,9 +60,6 @@
             }
         }
 
-
-         
-
         public function Add_Matkul(){
             if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
                 $data = array();
@@ -330,13 +327,9 @@
 
         public function Verifikasi_Mahasiswa($npm){
              if(!empty($this->session->userdata('logged_in')) && $this->session->userdata('status') == 'admin'){
-                $data['title'] = 'Ubah Data - KRSAPP';
+                // $data['title'] = 'Ubah Data - KRSAPP';
                 $data['record'] = $this->sistemAkademik->GetEntryMahasiswa($npm);
-            
-    
                     $update = $this->sistemAkademik->UpdateVerifikasiMahasiswa($npm);
-
-
                     if($update){
                         redirect('admin');
                     }
